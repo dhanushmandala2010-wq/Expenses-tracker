@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | ExpenseFlow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="auth-body">
+    <div class="auth-page">
+      <div class="auth-card">
+        <div class="auth-brand">
+          <div class="brand-mark">₹</div>
+          <div>
+            <p class="eyebrow">Private finance</p>
+            <h1>ExpenseFlow</h1>
+          </div>
+        </div>
+
+        <div class="auth-content">
+          <div class="auth-toggle" role="tablist" aria-label="Authentication mode">
+            <button type="button" class="auth-tab active" data-mode="login">Login</button>
+            <button type="button" class="auth-tab" data-mode="signup">Sign Up</button>
+          </div>
+
+          <div id="loginPanel" class="auth-panel active">
+            <div class="auth-header">
+              <p class="eyebrow">Welcome back</p>
+              <h2>Login to your account</h2>
+            </div>
+
+            <form id="loginForm" class="auth-form">
+              <label>
+                Email
+                <input type="email" id="loginEmail" placeholder="you@example.com" required />
+              </label>
+
+              <label>
+                Password
+                <input type="password" id="loginPassword" placeholder="Enter your password" required />
+              </label>
+
+              <div class="form-row">
+                <label class="remember-me">
+                  <input type="checkbox" />
+                  <span>Remember me</span>
+                </label>
+                <a href="#">Forgot password?</a>
+              </div>
+
+              <button type="submit" class="save-btn auth-btn">Login</button>
+            </form>
+          </div>
+
+          <div id="signupPanel" class="auth-panel">
+            <div class="auth-header">
+              <p class="eyebrow">Create account</p>
+              <h2>Start tracking your money</h2>
+            </div>
+
+            <form id="signupForm" class="auth-form">
+              <label>
+                Full name
+                <input type="text" id="signupName" placeholder="John Smith" required />
+              </label>
+
+              <label>
+                Email
+                <input type="email" id="signupEmail" placeholder="you@example.com" required />
+              </label>
+
+              <label>
+                Password
+                <input type="password" id="signupPassword" placeholder="Create a password" required />
+              </label>
+
+              <label>
+                Confirm password
+                <input type="password" id="signupConfirmPassword" placeholder="Confirm your password" required />
+              </label>
+
+              <button type="submit" class="save-btn auth-btn">Create account</button>
+            </form>
+          </div>
+
+          <p class="auth-footer">
+            <span id="authFooterText">Don’t have an account?</span>
+            <a href="#" id="switchAuthLink">Create one</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="login.js"></script>
+  </body>
+</html>
